@@ -18,26 +18,23 @@ class MainViewController: BaseViewController {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
-    override func viewIsAppearing(_ animated: Bool) {
-        super.viewIsAppearing(animated)
-    }
-    
     override func configureAction() {
+        mainView.addAction(object: mainView.goButton, target: self, action: #selector(goTotalTaskLists), event: .touchUpInside)
         mainView.addAction(object: mainView.addButton, target: self, action: #selector(showAddTaskVC), event: .touchUpInside)
     }
     
 }
 
 extension MainViewController {
-    @objc func showAddTaskVC() {
+    @objc
+    func goTotalTaskLists() {
+        goSomeVC(vc: TaskListViewController()) { _ in
+            print("성공~")
+        }
+    }
+    
+    @objc 
+    func showAddTaskVC() {
         presentSomeVC(vc: AddTaskViewController()) { _ in }
     }
 }

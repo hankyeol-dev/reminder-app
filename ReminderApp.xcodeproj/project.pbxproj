@@ -25,6 +25,10 @@
 		81CF20812C3413EA005A9014 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF20802C3413EA005A9014 /* Header.swift */; };
 		81CF20832C341676005A9014 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF20822C341676005A9014 /* Field.swift */; };
 		81CF20862C3416C6005A9014 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF20852C3416C6005A9014 /* Divider.swift */; };
+		81CF20882C342A29005A9014 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF20872C342A29005A9014 /* TaskListViewController.swift */; };
+		81CF208D2C342A8B005A9014 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF208C2C342A8B005A9014 /* TaskListView.swift */; };
+		81CF208F2C342AB3005A9014 /* LargeTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF208E2C342AB3005A9014 /* LargeTitle.swift */; };
+		81CF20912C342D2D005A9014 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF20902C342D2D005A9014 /* TaskCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,10 @@
 		81CF20802C3413EA005A9014 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		81CF20822C341676005A9014 /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		81CF20852C3416C6005A9014 /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
+		81CF20872C342A29005A9014 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
+		81CF208C2C342A8B005A9014 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		81CF208E2C342AB3005A9014 /* LargeTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTitle.swift; sourceTree = "<group>"; };
+		81CF20902C342D2D005A9014 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				81CF20842C3416BF005A9014 /* Common */,
+				81CF208A2C342A59005A9014 /* Base */,
+				81CF20892C342A4E005A9014 /* Main */,
 				81CF207F2C3413D9005A9014 /* AddTask */,
-				81CF20792C33EBEC005A9014 /* Extenstion+UIButtons.swift */,
-				81CF20722C33E8BD005A9014 /* BaseView.swift */,
-				81CF20742C33EA7F005A9014 /* MainView.swift */,
+				81CF208B2C342A66005A9014 /* TaskList */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -118,6 +126,7 @@
 				81CF20702C33E634005A9014 /* BaseViewController.swift */,
 				81CF20502C33E508005A9014 /* MainViewController.swift */,
 				81CF207B2C33F091005A9014 /* AddTaskViewController.swift */,
+				81CF20872C342A29005A9014 /* TaskListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -136,8 +145,35 @@
 			isa = PBXGroup;
 			children = (
 				81CF20852C3416C6005A9014 /* Divider.swift */,
+				81CF208E2C342AB3005A9014 /* LargeTitle.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		81CF20892C342A4E005A9014 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				81CF20742C33EA7F005A9014 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		81CF208A2C342A59005A9014 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				81CF20792C33EBEC005A9014 /* Extenstion+UIButtons.swift */,
+				81CF20722C33E8BD005A9014 /* BaseView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		81CF208B2C342A66005A9014 /* TaskList */ = {
+			isa = PBXGroup;
+			children = (
+				81CF208C2C342A8B005A9014 /* TaskListView.swift */,
+				81CF20902C342D2D005A9014 /* TaskCell.swift */,
+			);
+			path = TaskList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,12 +257,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				81CF20712C33E634005A9014 /* BaseViewController.swift in Sources */,
+				81CF20912C342D2D005A9014 /* TaskCell.swift in Sources */,
 				81CF207E2C33FF39005A9014 /* AddTaskView.swift in Sources */,
+				81CF208D2C342A8B005A9014 /* TaskListView.swift in Sources */,
 				81CF20862C3416C6005A9014 /* Divider.swift in Sources */,
 				81CF20832C341676005A9014 /* Field.swift in Sources */,
 				81CF20752C33EA7F005A9014 /* MainView.swift in Sources */,
 				81CF20512C33E508005A9014 /* MainViewController.swift in Sources */,
 				81CF206D2C33E5EF005A9014 /* ReminderModel.swift in Sources */,
+				81CF208F2C342AB3005A9014 /* LargeTitle.swift in Sources */,
+				81CF20882C342A29005A9014 /* TaskListViewController.swift in Sources */,
 				81CF20812C3413EA005A9014 /* Header.swift in Sources */,
 				81CF20732C33E8BD005A9014 /* BaseView.swift in Sources */,
 				81CF207A2C33EBEC005A9014 /* Extenstion+UIButtons.swift in Sources */,
