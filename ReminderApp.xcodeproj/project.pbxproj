@@ -9,21 +9,42 @@
 /* Begin PBXBuildFile section */
 		81CF204D2C33E508005A9014 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF204C2C33E508005A9014 /* AppDelegate.swift */; };
 		81CF204F2C33E508005A9014 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF204E2C33E508005A9014 /* SceneDelegate.swift */; };
-		81CF20512C33E508005A9014 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF20502C33E508005A9014 /* ViewController.swift */; };
-		81CF20542C33E508005A9014 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 81CF20532C33E508005A9014 /* Base */; };
+		81CF20512C33E508005A9014 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF20502C33E508005A9014 /* MainViewController.swift */; };
 		81CF20562C33E509005A9014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81CF20552C33E509005A9014 /* Assets.xcassets */; };
 		81CF20592C33E509005A9014 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 81CF20582C33E509005A9014 /* Base */; };
+		81CF20622C33E556005A9014 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 81CF20612C33E556005A9014 /* RealmSwift */; };
+		81CF20652C33E562005A9014 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 81CF20642C33E562005A9014 /* Toast */; };
+		81CF20682C33E56E005A9014 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 81CF20672C33E56E005A9014 /* SnapKit */; };
+		81CF206D2C33E5EF005A9014 /* ReminderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF206C2C33E5EF005A9014 /* ReminderModel.swift */; };
+		81CF20712C33E634005A9014 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF20702C33E634005A9014 /* BaseViewController.swift */; };
+		81CF20732C33E8BD005A9014 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF20722C33E8BD005A9014 /* BaseView.swift */; };
+		81CF20752C33EA7F005A9014 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF20742C33EA7F005A9014 /* MainView.swift */; };
+		81CF207A2C33EBEC005A9014 /* Extenstion+UIButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF20792C33EBEC005A9014 /* Extenstion+UIButtons.swift */; };
+		81CF207C2C33F091005A9014 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF207B2C33F091005A9014 /* AddTaskViewController.swift */; };
+		81CF207E2C33FF39005A9014 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF207D2C33FF39005A9014 /* AddTaskView.swift */; };
+		81CF20812C3413EA005A9014 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF20802C3413EA005A9014 /* Header.swift */; };
+		81CF20832C341676005A9014 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF20822C341676005A9014 /* Field.swift */; };
+		81CF20862C3416C6005A9014 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF20852C3416C6005A9014 /* Divider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		81CF20492C33E508005A9014 /* ReminderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReminderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CF204C2C33E508005A9014 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81CF204E2C33E508005A9014 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		81CF20502C33E508005A9014 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		81CF20532C33E508005A9014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		81CF20502C33E508005A9014 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		81CF20552C33E509005A9014 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81CF20582C33E509005A9014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81CF205A2C33E509005A9014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81CF206C2C33E5EF005A9014 /* ReminderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderModel.swift; sourceTree = "<group>"; };
+		81CF20702C33E634005A9014 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		81CF20722C33E8BD005A9014 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		81CF20742C33EA7F005A9014 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		81CF20792C33EBEC005A9014 /* Extenstion+UIButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extenstion+UIButtons.swift"; sourceTree = "<group>"; };
+		81CF207B2C33F091005A9014 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		81CF207D2C33FF39005A9014 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		81CF20802C3413EA005A9014 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		81CF20822C341676005A9014 /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		81CF20852C3416C6005A9014 /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81CF20682C33E56E005A9014 /* SnapKit in Frameworks */,
+				81CF20652C33E562005A9014 /* Toast in Frameworks */,
+				81CF20622C33E556005A9014 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +80,64 @@
 		81CF204B2C33E508005A9014 /* ReminderApp */ = {
 			isa = PBXGroup;
 			children = (
+				81CF206A2C33E5D8005A9014 /* Model */,
+				81CF20692C33E5AD005A9014 /* View */,
+				81CF206B2C33E5DD005A9014 /* Controller */,
 				81CF204C2C33E508005A9014 /* AppDelegate.swift */,
 				81CF204E2C33E508005A9014 /* SceneDelegate.swift */,
-				81CF20502C33E508005A9014 /* ViewController.swift */,
-				81CF20522C33E508005A9014 /* Main.storyboard */,
 				81CF20552C33E509005A9014 /* Assets.xcassets */,
 				81CF20572C33E509005A9014 /* LaunchScreen.storyboard */,
 				81CF205A2C33E509005A9014 /* Info.plist */,
 			);
 			path = ReminderApp;
+			sourceTree = "<group>";
+		};
+		81CF20692C33E5AD005A9014 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81CF20842C3416BF005A9014 /* Common */,
+				81CF207F2C3413D9005A9014 /* AddTask */,
+				81CF20792C33EBEC005A9014 /* Extenstion+UIButtons.swift */,
+				81CF20722C33E8BD005A9014 /* BaseView.swift */,
+				81CF20742C33EA7F005A9014 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		81CF206A2C33E5D8005A9014 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				81CF206C2C33E5EF005A9014 /* ReminderModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		81CF206B2C33E5DD005A9014 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				81CF20702C33E634005A9014 /* BaseViewController.swift */,
+				81CF20502C33E508005A9014 /* MainViewController.swift */,
+				81CF207B2C33F091005A9014 /* AddTaskViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		81CF207F2C3413D9005A9014 /* AddTask */ = {
+			isa = PBXGroup;
+			children = (
+				81CF207D2C33FF39005A9014 /* AddTaskView.swift */,
+				81CF20802C3413EA005A9014 /* Header.swift */,
+				81CF20822C341676005A9014 /* Field.swift */,
+			);
+			path = AddTask;
+			sourceTree = "<group>";
+		};
+		81CF20842C3416BF005A9014 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				81CF20852C3416C6005A9014 /* Divider.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +156,11 @@
 			dependencies = (
 			);
 			name = ReminderApp;
+			packageProductDependencies = (
+				81CF20612C33E556005A9014 /* RealmSwift */,
+				81CF20642C33E562005A9014 /* Toast */,
+				81CF20672C33E56E005A9014 /* SnapKit */,
+			);
 			productName = ReminderApp;
 			productReference = 81CF20492C33E508005A9014 /* ReminderApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +189,11 @@
 				Base,
 			);
 			mainGroup = 81CF20402C33E508005A9014;
+			packageReferences = (
+				81CF20602C33E556005A9014 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				81CF20632C33E562005A9014 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				81CF20662C33E56E005A9014 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 81CF204A2C33E508005A9014 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +210,6 @@
 			files = (
 				81CF20562C33E509005A9014 /* Assets.xcassets in Resources */,
 				81CF20592C33E509005A9014 /* Base in Resources */,
-				81CF20542C33E508005A9014 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +220,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81CF20512C33E508005A9014 /* ViewController.swift in Sources */,
+				81CF20712C33E634005A9014 /* BaseViewController.swift in Sources */,
+				81CF207E2C33FF39005A9014 /* AddTaskView.swift in Sources */,
+				81CF20862C3416C6005A9014 /* Divider.swift in Sources */,
+				81CF20832C341676005A9014 /* Field.swift in Sources */,
+				81CF20752C33EA7F005A9014 /* MainView.swift in Sources */,
+				81CF20512C33E508005A9014 /* MainViewController.swift in Sources */,
+				81CF206D2C33E5EF005A9014 /* ReminderModel.swift in Sources */,
+				81CF20812C3413EA005A9014 /* Header.swift in Sources */,
+				81CF20732C33E8BD005A9014 /* BaseView.swift in Sources */,
+				81CF207A2C33EBEC005A9014 /* Extenstion+UIButtons.swift in Sources */,
 				81CF204D2C33E508005A9014 /* AppDelegate.swift in Sources */,
 				81CF204F2C33E508005A9014 /* SceneDelegate.swift in Sources */,
+				81CF207C2C33F091005A9014 /* AddTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		81CF20522C33E508005A9014 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				81CF20532C33E508005A9014 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		81CF20572C33E509005A9014 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -218,7 +302,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -275,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -297,9 +381,9 @@
 				INFOPLIST_FILE = ReminderApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +391,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hk.ReminderApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -325,9 +413,9 @@
 				INFOPLIST_FILE = ReminderApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +423,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hk.ReminderApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -363,6 +455,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		81CF20602C33E556005A9014 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.52.1;
+			};
+		};
+		81CF20632C33E562005A9014 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+		81CF20662C33E56E005A9014 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		81CF20612C33E556005A9014 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81CF20602C33E556005A9014 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		81CF20642C33E562005A9014 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81CF20632C33E562005A9014 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+		81CF20672C33E56E005A9014 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81CF20662C33E56E005A9014 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 81CF20412C33E508005A9014 /* Project object */;
 }
