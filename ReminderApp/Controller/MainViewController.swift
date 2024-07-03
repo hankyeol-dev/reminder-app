@@ -28,13 +28,12 @@ class MainViewController: BaseViewController {
 extension MainViewController {
     @objc
     func goTotalTaskLists() {
-        goSomeVC(vc: TaskListViewController()) { _ in
-            print("성공~")
-        }
+        goSomeVC(vc: TaskListViewController()) { _ in }
     }
     
     @objc 
     func showAddTaskVC() {
-        presentSomeVC(vc: AddTaskViewController()) { _ in }
+        let vc = UINavigationController(rootViewController: AddTaskViewController())
+        presentSomeVC(vc: vc) { _ in }
     }
 }

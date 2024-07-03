@@ -9,25 +9,26 @@ import UIKit
 import SnapKit
 
 class AddTaskView: BaseView {
-    let header = Header()
     let field = Field()
+    let goDetail = DetailsButton("세부사항")
     
     override func configureSubView() {
-        [header, field].forEach {
+        [field, goDetail].forEach {
             self.addSubview($0)
         }
     }
     
     override func configureLayout() {
-        header.snp.makeConstraints {
-            $0.top.horizontalEdges.equalTo(self.safeAreaLayoutGuide)
-            $0.height.equalTo(52)
-        }
-        
         field.snp.makeConstraints {
-            $0.top.equalTo(header.snp.bottom)
+            $0.top.equalTo(self.safeAreaLayoutGuide)
             $0.horizontalEdges.equalTo(self.safeAreaLayoutGuide)
             $0.height.equalTo(240)
+        }
+        
+        goDetail.snp.makeConstraints {
+            $0.top.equalTo(field.snp.bottom)
+            $0.horizontalEdges.equalTo(self.safeAreaLayoutGuide)
+            $0.height.equalTo(80)
         }
     }
 }

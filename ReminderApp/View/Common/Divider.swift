@@ -23,6 +23,6 @@ class Divider: BaseView {
     
     override func configureView() {
         line.layer.borderWidth = 1
-        line.layer.borderColor = UIColor.systemGray6.cgColor
+        line.layer.borderColor = UIColor.systemGray3.cgColor
     }
 }

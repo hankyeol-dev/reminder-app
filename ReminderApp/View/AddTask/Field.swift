@@ -45,7 +45,6 @@ final class Field: BaseView {
         back.backgroundColor = .systemGray4
         
         titleField.backgroundColor = .none
-        titleField.tintColor = .systemGray6
         titleField.placeholder = "제목"
         titleField.textColor = .black
         titleField.font = .systemFont(ofSize: 13)
@@ -58,7 +57,7 @@ final class Field: BaseView {
     
     func configureMemoFieldInit() {
         memoField.text = "메모"
-        memoField.textColor = .gray
+        memoField.textColor = .systemGray2
     }
     
     func configureMemoFieldBegin() {

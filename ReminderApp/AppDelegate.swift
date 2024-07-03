@@ -6,14 +6,24 @@
 //
 
 import UIKit
+import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        do {
+            let db = try Realm()
+            let version = try schemaVersionAtURL(db.configuration.fileURL!)
+            Realm.Configuration.defaultConfiguration = Realm.Configuration(schemaVersion: version)
+            
+            print(db.objects(Tasks.self))
+            print(db.objects(Tags.self))
+        } catch {
+            print(error)
+        }
+        
         return true
     }
 
