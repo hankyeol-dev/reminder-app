@@ -10,9 +10,13 @@ import RealmSwift
 import Toast
 
 final class AddTaskViewController: BaseViewController {
+    private let taskRepository = Repository<Tasks>()
+    private let tagRepository = Repository<Tags>()
+    
     private var due: Date?
     private var priority: String = ""
     private var tags: String = ""
+    private var isFlaged: Bool = false
     
     private let mainView = AddTaskView()
     
@@ -56,46 +60,61 @@ extension AddTaskViewController {
     
     @objc
     func saveTask() {
-        guard let titleText = mainView.field.titleField.text,
-              let memoText = mainView.field.memoField.text else {
-            print("여기가 nil?")
-            return
-        }
-        guard let due = self.due else {
-            print("due가 nil?")
-            return
-        }
-        guard self.priority != "" || self.priority != "없음" else {
-            print("priority가 nil?")
-            return
-        }
-        guard self.tags != "" else {
-            print("아니면 태그가?")
-            return
+        var result:Output<Tasks>
+        // 1. Task는 일단 타이틀만 있으면 만들어질 수 있다.
+        guard let titleT = mainView.field.titleField.text else { return }
+        let singleTask = Tasks(title: titleT, isFlaged: self.isFlaged)
+        
+        // 2. 메모가 있고, 비워져있지 않다면 반영해준다.
+        if let memoT = mainView.field.memoField.text, !memoT.isEmpty, memoT != "메모" {
+            singleTask.memo = memoT
         }
         
-        do {
-            let db = try Realm()
-            let task = Tasks(title: titleText, memo: memoText, dueDate: due)
-            let tag = Tags(name: self.tags)
-            
-            try db.write {
-                db.add(task)
-                db.add(tag)
-            }
-            self.dismiss(animated: true)
-        } catch {
-            self.mainView.makeToast("새로운 할 일을 저장할 수 없어요 :(", duration: 5, position: .bottom)
+        // 3. 완료일이 정해져 있다면 반영해준다.
+        if let due = self.due {
+            singleTask.dueDate = due
         }
+        
+        // 4. priority는 걍 담아주면 됨.
+        if self.priority != "", self.priority != "없음" {
+            singleTask.priority = self.priority
+        }
+        
+        // 5. 만약에 tag가 있다면, tags list에 반영해주고, linkingObject에도 반영해줘야 함
+        if self.tags != "" {
+            let relatedTag = Tags(name: self.tags)
+            self.tagRepository.addRecordWithHandler(relatedTag) { tag in
+                tag.tasks.append(singleTask)
+            }
+            result = self.taskRepository.addRecordWithHandler(singleTask) { task in
+                task.tags.append(relatedTag)
+            }
+        } else {
+            result = taskRepository.addSingleRecord(singleTask)
+        }
+        
+        
+        
+        if result.ok {
+            self.dismissVC()
+        } else {
+            view.makeToast(result.error, duration: 4)
+        }
+        
     }
     
     @objc
     func goTaskDetail() {
         goSomeVC(vc: TaskDetailViewController()) { vc in
             vc.sender = {
-                self.due = vc.due
+                
+                if let due = vc.due {
+                    self.due = due
+                }
+                
                 self.priority = vc.priority
                 self.tags = vc.tags
+                self.isFlaged = vc.isFlaged
             }
         }
     }

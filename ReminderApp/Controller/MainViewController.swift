@@ -9,6 +9,7 @@ import UIKit
 
 class MainViewController: BaseViewController {
     private var taskLists = TaskListModel
+    private let taskRepository = Repository<Tasks>()
     
     private let mainView = MainView()
     
@@ -19,6 +20,8 @@ class MainViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollection()
+        
+        print(taskRepository.getRealmURL() ?? "")
     }
     
     override func configureAction() {

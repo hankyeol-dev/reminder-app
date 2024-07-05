@@ -13,6 +13,7 @@
 		8189BD562C36BF9500B9419C /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BD552C36BF9500B9419C /* Output.swift */; };
 		8189BD5B2C36E16B00B9419C /* CollectionItemInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BD5A2C36E16B00B9419C /* CollectionItemInput.swift */; };
 		8189BD5D2C377CA600B9419C /* TasksListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BD5C2C377CA600B9419C /* TasksListModel.swift */; };
+		8189BD5F2C37829000B9419C /* FlagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BD5E2C37829000B9419C /* FlagCell.swift */; };
 		81CF204D2C33E508005A9014 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF204C2C33E508005A9014 /* AppDelegate.swift */; };
 		81CF204F2C33E508005A9014 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF204E2C33E508005A9014 /* SceneDelegate.swift */; };
 		81CF20512C33E508005A9014 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CF20502C33E508005A9014 /* MainViewController.swift */; };
@@ -52,6 +53,7 @@
 		8189BD552C36BF9500B9419C /* Output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
 		8189BD5A2C36E16B00B9419C /* CollectionItemInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionItemInput.swift; sourceTree = "<group>"; };
 		8189BD5C2C377CA600B9419C /* TasksListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListModel.swift; sourceTree = "<group>"; };
+		8189BD5E2C37829000B9419C /* FlagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagCell.swift; sourceTree = "<group>"; };
 		81CF20492C33E508005A9014 /* ReminderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReminderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CF204C2C33E508005A9014 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81CF204E2C33E508005A9014 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,8 +179,8 @@
 				81CF20702C33E634005A9014 /* BaseViewController.swift */,
 				81CF20502C33E508005A9014 /* MainViewController.swift */,
 				81CF207B2C33F091005A9014 /* AddTaskViewController.swift */,
-				81CF20872C342A29005A9014 /* TaskListViewController.swift */,
 				81CF209B2C3514BF005A9014 /* TaskDetailViewController.swift */,
+				81CF20872C342A29005A9014 /* TaskListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -238,6 +240,7 @@
 				81CF20A02C351BB0005A9014 /* DuedateCell.swift */,
 				81CF20A42C3539B8005A9014 /* PriorityCell.swift */,
 				81CF20A62C353EE0005A9014 /* TagCell.swift */,
+				8189BD5E2C37829000B9419C /* FlagCell.swift */,
 			);
 			path = TaskDetail;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				81CF209C2C3514BF005A9014 /* TaskDetailViewController.swift in Sources */,
 				81CF209A2C3510B8005A9014 /* DetailsButton.swift in Sources */,
 				81CF20712C33E634005A9014 /* BaseViewController.swift in Sources */,
+				8189BD5F2C37829000B9419C /* FlagCell.swift in Sources */,
 				8189BD5B2C36E16B00B9419C /* CollectionItemInput.swift in Sources */,
 				81CF20912C342D2D005A9014 /* TaskCell.swift in Sources */,
 				81CF207E2C33FF39005A9014 /* AddTaskView.swift in Sources */,

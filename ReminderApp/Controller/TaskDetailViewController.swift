@@ -7,12 +7,14 @@
 
 import UIKit
 
-class TaskDetailViewController: BaseViewController {
+final class TaskDetailViewController: BaseViewController {
     var sender: (() -> ())?
     var due: Date?
     var priority: String = ""
     var tags: String = ""
+    var isFlaged: Bool = false
     
+    private let cells = [DuedateCell.self, PriorityCell.self, TagCell.self, FlagCell.self]
     private let mainView = TaskDetailView()
     
     override func loadView() {
@@ -45,43 +47,39 @@ extension TaskDetailViewController: UITableViewDelegate, UITableViewDataSource {
         table.rowHeight = UITableView.automaticDimension
         table.separatorStyle = .none
         
-        table.register(DuedateCell.self, forCellReuseIdentifier: DuedateCell.id)
-        table.register(PriorityCell.self, forCellReuseIdentifier: PriorityCell.id)
-        table.register(TagCell.self, forCellReuseIdentifier: TagCell.id)
+        cells.forEach {
+            table.register($0, forCellReuseIdentifier: $0.id)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return cells.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: DuedateCell.id, for: indexPath) as? DuedateCell else { return UITableViewCell() }
-            
-            cell.sender = { d in
-                self.due = d
+        switch indexPath.row {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: DuedateCell.id, for: indexPath) as! DuedateCell
+            cell.sender = { due in
+                self.due = due
             }
-            
             return cell
-        } else if indexPath.row == 1 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: PriorityCell.id, for: indexPath) as? PriorityCell else { return UITableViewCell() }
-            
-            cell.sender = { v in
-                self.priority = v
-            }
-            
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: PriorityCell.id, for: indexPath) as! PriorityCell
+            cell.sender = { priority in self.priority = priority }
             return cell
-        } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TagCell.id, for: indexPath) as? TagCell else { return UITableViewCell() }
-            
-            cell.sender = { v in
-                if !v.isEmpty {
-                    self.tags = v
-                }
-            }
-            
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: TagCell.id, for: indexPath) as! TagCell
+            cell.sender = { tags in self.tags = tags }
             return cell
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: FlagCell.id, for: indexPath) as! FlagCell
+            cell.sender = { isFlaged in self.isFlaged = isFlaged }
+            return cell
+        default:
+            return UITableViewCell()
         }
+
     }
 }

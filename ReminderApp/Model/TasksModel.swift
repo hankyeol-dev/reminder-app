@@ -24,6 +24,7 @@ final class Tasks: Object {
     @Persisted var title: String
     @Persisted var memo: String?
     @Persisted var dueDate: Date?
+    @Persisted var priority: String?
     @Persisted var isCompleted: Bool
     @Persisted var isFlaged: Bool
     @Persisted var createdAt: Date = Date()
@@ -32,11 +33,13 @@ final class Tasks: Object {
     @Persisted var tags: List<Tags>
     @Persisted(originProperty: "tasks") var link: LinkingObjects<Tags>
     
-    convenience init(title: String, memo: String? = nil, dueDate: Date? = nil, isCompleted: Bool = false, isFlaged: Bool = false) {
+    convenience init(title: String, memo: String? = nil, dueDate: Date? = nil, priority: String? = nil, isCompleted: Bool = false, isFlaged: Bool = false) {
         self.init()
+        
         self.title = title
         self.memo = memo
         self.dueDate = dueDate
+        self.priority = priority
         self.isCompleted = isCompleted
         self.isFlaged = isFlaged
     }

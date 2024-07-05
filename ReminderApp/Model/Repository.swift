@@ -11,6 +11,10 @@ import RealmSwift
 final class Repository<T: Object> {
     private let db = try! Realm()
     
+    func getRealmURL() -> URL? {
+        return db.configuration.fileURL
+    }
+    
     func getRecordById(_ id: ObjectId) -> Output<T> {
         
         guard let record = db.object(ofType: T.self, forPrimaryKey: id) else {
@@ -37,6 +41,7 @@ final class Repository<T: Object> {
     func addRecordWithHandler(_ recordData: T, handler: @escaping (T) -> ())  -> Output<T> {
         do {
             try db.write {
+                db.add(recordData)
                 handler(recordData)
             }
             return Output(ok: true, error: nil, output: nil)

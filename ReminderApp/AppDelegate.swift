@@ -13,14 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        do {
-            let db = try Realm()
-            let version = try schemaVersionAtURL(db.configuration.fileURL!)
-            Realm.Configuration.defaultConfiguration = Realm.Configuration(schemaVersion: version)
-        } catch {
-            print(error)
-        }
-        
+        Realm.Configuration.defaultConfiguration = Realm.Configuration(schemaVersion: 0)
+    
         return true
     }
 

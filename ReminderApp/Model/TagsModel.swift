@@ -13,7 +13,7 @@ final class Tags: Object {
     @Persisted var name: String
     
     @Persisted var tasks: List<Tasks>
-     @Persisted(originProperty: "tags") var link: LinkingObjects<Tasks>
+    @Persisted(originProperty: "tags") var link: LinkingObjects<Tasks>
     
     convenience init(name: String) {
         self.init()
