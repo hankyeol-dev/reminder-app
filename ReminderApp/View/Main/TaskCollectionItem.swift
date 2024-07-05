@@ -17,12 +17,12 @@ final class TaskCollectionItem: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureView()
     }
-
+    
     func configureView() {
         let guide = contentView.safeAreaLayoutGuide
         [iconBack, count, name].forEach {
@@ -62,4 +62,5 @@ final class TaskCollectionItem: UICollectionViewCell {
         count.text = String(data.count)
         name.text = data.name
     }
+    
 }

@@ -9,7 +9,6 @@ import UIKit
 
 final class MainViewController: BaseViewController {
     private var taskLists = TaskListModel
-    private var taskListsCount = TaskListModel.map { _ in return 0 }
     private let taskRepository = Repository<Tasks>()
     
     private let mainView = MainView()
@@ -21,6 +20,13 @@ final class MainViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollection()
+        self.mappingCollectionCount()
+        self.mainView.collection.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.mappingCollectionCount()
+        self.mainView.collection.reloadData()
     }
     
     override func configureAction() {
@@ -33,7 +39,7 @@ extension MainViewController {
     @objc
     func goTotalTaskLists() {
         goSomeVC(vc: TaskListViewController()) { vc in
-            vc.configureViewWithData("전체", .systemGreen)
+//            vc.configureViewWithData("전체", .systemGreen)
         }
     }
     
@@ -49,7 +55,7 @@ extension MainViewController {
     }
     
     private func mappingCollectionCount() {
-        [self.countByDueDate(.orderedSame), self.countByDueDate(.orderedDescending), self.countByCompletion(false), self.countByIsFlaged(), self.countByCompletion(true)].enumerated().forEach { (idx, value) in
+        [self.countByDueDate(.orderedSame), self.countByDueDate(.orderedAscending), self.countByCompletion(false), self.countByIsFlaged(), self.countByCompletion(true)].enumerated().forEach { (idx, value) in
             self.taskLists[idx].count = value
         }
     }
@@ -103,5 +109,10 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return item
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        goSomeVC(vc: TaskListViewController()) { vc in
+            vc.configureViewWithData(self.taskLists[indexPath.row])
+        }
+        collectionView.reloadData()
+    }
 }

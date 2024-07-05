@@ -50,4 +50,43 @@ final class Repository<T: Object> {
             return Output(ok: false, error: "데이터 저장에 실패했어요. 🥲", output: nil)
         }
     }
+    
+    func updateSingleRecordById(id: ObjectId, updateHandler: @escaping (T) -> ()) -> Output<T> {
+        let record = self.getRecordById(id)
+        if record.ok {
+            do {
+                try db.write {
+                    if let record = record.output {
+                        updateHandler(record)
+                        db.add(record, update: .modified)
+                    }
+                }
+                
+                return Output(ok: true, error: nil, output: nil)
+            } catch {
+                return Output(ok: false, error: "데이터 업데이트에 실패했어요. 🥲", output: nil)
+            }
+        } else {
+            return Output(ok: false, error: "업데이트 할 데이터를 찾지 못했어요. 🥲", output: nil)
+        }
+    }
+    
+    func deleteSingleRecordById(id: ObjectId) -> Output<T> {
+        let record = self.getRecordById(id)
+        if record.ok {
+            do {
+                try db.write {
+                    if let record = record.output {
+                        db.delete(record)
+                    }
+                }
+                
+                return Output(ok: true, error: nil, output: nil)
+            } catch {
+                return Output(ok: false, error: "데이터 업데이트에 실패했어요. 🥲", output: nil)
+            }
+        } else {
+            return Output(ok: false, error: "업데이트 할 데이터를 찾지 못했어요. 🥲", output: nil)
+        }
+    }
 }

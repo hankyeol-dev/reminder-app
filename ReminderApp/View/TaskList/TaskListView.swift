@@ -25,7 +25,8 @@ final class TaskListView: BaseView {
         }
         table.snp.makeConstraints {
             $0.top.equalTo(largeTitle.snp.bottom)
-            $0.horizontalEdges.bottom.equalTo(self.safeAreaLayoutGuide)
+            $0.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(16)
+            $0.bottom.equalTo(self.safeAreaLayoutGuide).inset(8)
         }
     }
     

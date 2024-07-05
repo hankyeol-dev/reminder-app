@@ -12,11 +12,12 @@ import SnapKit
 // circle
 
 final class TaskCell: UITableViewCell {
+    private let back = UIView()
+    private let taskStack = UIStackView()
+    private let taskTitle = UILabel()
+    private let taskMemo = UILabel()
+    private let taskDue = UILabel()
     let button = UIButton()
-    let taskStack = UIStackView()
-    let taskTitle = UILabel()
-    let taskMemo = UILabel()
-    let taskDue = UILabel()
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -30,28 +31,38 @@ final class TaskCell: UITableViewCell {
         configureView()
     }
 
-    func configureSubView() {
+    private func configureSubView() {
+        contentView.addSubview(back)
+        
         [button, taskStack].forEach {
-            contentView.addSubview($0)
+            back.addSubview($0)
         }
-        [taskTitle, taskMemo, taskDue].forEach {
+        [taskTitle].forEach {
             taskStack.addArrangedSubview($0)
         }
     }
     
-    func configureLayout() {
+    private func configureLayout() {
+        back.snp.makeConstraints {
+            $0.horizontalEdges.equalTo(contentView.safeAreaLayoutGuide)
+            $0.verticalEdges.equalTo(contentView.safeAreaLayoutGuide).inset(4)
+        }
         button.snp.makeConstraints {
-            $0.top.equalTo(contentView.safeAreaLayoutGuide)
-            $0.leading.equalTo(contentView.safeAreaLayoutGuide).inset(16)
-            $0.size.equalTo(24)
+            $0.top.equalTo(back.safeAreaLayoutGuide).inset(8)
+            $0.leading.equalTo(back.safeAreaLayoutGuide).inset(16)
+            $0.size.equalTo(16)
         }
         taskStack.snp.makeConstraints {
+            $0.top.equalTo(back.safeAreaLayoutGuide).inset(8)
             $0.leading.equalTo(button.snp.trailing).offset(12)
-            $0.verticalEdges.trailing.equalTo(contentView.safeAreaLayoutGuide).inset(4)
+            $0.trailing.equalTo(back.safeAreaLayoutGuide).inset(16)
+            $0.bottom.equalTo(back.safeAreaLayoutGuide).inset(8)
         }
     }
     
-    func configureView() {
+    private func configureView() {
+        back.backgroundColor = .systemGray5
+        
         button.configuration = .borderless()
         button.configuration?.image = UIImage(systemName: "circle")
         button.configuration?.baseBackgroundColor = .white
@@ -63,10 +74,24 @@ final class TaskCell: UITableViewCell {
         taskStack.alignment = .top
         
         taskTitle.font = .systemFont(ofSize: 14)
-        taskMemo.font = .systemFont(ofSize: 10)
-        taskMemo.textColor = .systemGray3
-        taskDue.font = .systemFont(ofSize: 10)
-        taskDue.textColor = .systemGray3
     }
     
+    func configureViewWithData(_ data: Tasks) {
+        taskTitle.text = data.title
+        
+        if let memo = data.memo {
+            taskStack.addArrangedSubview(taskMemo)
+            taskMemo.text = memo
+            taskMemo.font = .systemFont(ofSize: 12)
+            taskMemo.textColor = .black
+        }
+        
+        if let due = data.dueDate {
+            taskStack.addArrangedSubview(taskDue)
+            taskDue.text = due.formatted()
+            taskDue.font = .systemFont(ofSize: 10)
+            taskDue.textColor = .systemGray3
+        }
+        
+    }
 }
