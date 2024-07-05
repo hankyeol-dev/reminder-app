@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8189BD4E2C36B73300B9419C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BD4D2C36B73300B9419C /* Repository.swift */; };
-		8189BD512C36B83C00B9419C /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BD502C36B83C00B9419C /* DateService.swift */; };
+		8189BD512C36B83C00B9419C /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BD502C36B83C00B9419C /* Extension+Date.swift */; };
 		8189BD532C36BACB00B9419C /* TagsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BD522C36BACB00B9419C /* TagsModel.swift */; };
 		8189BD562C36BF9500B9419C /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BD552C36BF9500B9419C /* Output.swift */; };
 		8189BD5B2C36E16B00B9419C /* CollectionItemInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BD5A2C36E16B00B9419C /* CollectionItemInput.swift */; };
@@ -48,7 +48,7 @@
 
 /* Begin PBXFileReference section */
 		8189BD4D2C36B73300B9419C /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		8189BD502C36B83C00B9419C /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
+		8189BD502C36B83C00B9419C /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
 		8189BD522C36BACB00B9419C /* TagsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsModel.swift; sourceTree = "<group>"; };
 		8189BD552C36BF9500B9419C /* Output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
 		8189BD5A2C36E16B00B9419C /* CollectionItemInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionItemInput.swift; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 		8189BD4F2C36B83500B9419C /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				8189BD502C36B83C00B9419C /* DateService.swift */,
+				8189BD502C36B83C00B9419C /* Extension+Date.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -346,7 +346,7 @@
 				81CF209F2C351A7F005A9014 /* TaskDetailView.swift in Sources */,
 				81CF20812C3413EA005A9014 /* Header.swift in Sources */,
 				81CF20732C33E8BD005A9014 /* BaseView.swift in Sources */,
-				8189BD512C36B83C00B9419C /* DateService.swift in Sources */,
+				8189BD512C36B83C00B9419C /* Extension+Date.swift in Sources */,
 				8189BD562C36BF9500B9419C /* Output.swift in Sources */,
 				81CF207A2C33EBEC005A9014 /* Extenstion+UIButtons.swift in Sources */,
 				81CF204D2C33E508005A9014 /* AppDelegate.swift in Sources */,

@@ -27,6 +27,7 @@ final class Repository<T: Object> {
         return Output(ok: true, error: nil, output: records)
     }
     
+    
     func addSingleRecord(_ recordData: T) -> Output<T> {
         do {
             try db.write {

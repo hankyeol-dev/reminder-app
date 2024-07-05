@@ -10,6 +10,8 @@ import RealmSwift
 import Toast
 
 final class AddTaskViewController: BaseViewController {
+    var sender: (() -> ())?
+    
     private let taskRepository = Repository<Tasks>()
     private let tagRepository = Repository<Tags>()
     
@@ -44,6 +46,11 @@ final class AddTaskViewController: BaseViewController {
         } else {
             navigationItem.rightBarButtonItem?.isEnabled = false
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        sender?()
     }
     
     override func configureAction() {
