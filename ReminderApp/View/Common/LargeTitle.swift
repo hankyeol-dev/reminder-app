@@ -9,26 +9,26 @@ import UIKit
 import SnapKit
 
 final class LargeTitle: BaseView {
-    private let back = UIView()
-    let label = UILabel()
+    private let label = UILabel()
     
     override func configureSubView() {
-        self.addSubview(back)
-        back.addSubview(label)
+        self.addSubview(label)
     }
     
     override func configureLayout() {
-        back.snp.makeConstraints {
-            $0.edges.equalTo(self.safeAreaLayoutGuide)
-        }
         label.snp.makeConstraints {
-            $0.centerY.equalTo(back.snp.centerY)
-            $0.leading.equalTo(back.safeAreaLayoutGuide).inset(12)
+            $0.centerY.equalTo(self.snp.centerY)
+            $0.leading.equalTo(self.safeAreaLayoutGuide).inset(16)
         }
     }
     
     override func configureView() {
         label.textColor = .systemGreen
-        label.font = .boldSystemFont(ofSize: 20)
+        label.font = .boldSystemFont(ofSize: 24)
+    }
+    
+    func setTitle(_ t: String, _ c: UIColor) {
+        label.text = t
+        label.textColor = c
     }
 }

@@ -17,9 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let db = try Realm()
             let version = try schemaVersionAtURL(db.configuration.fileURL!)
             Realm.Configuration.defaultConfiguration = Realm.Configuration(schemaVersion: version)
-            
-            print(db.objects(Tasks.self))
-            print(db.objects(Tags.self))
         } catch {
             print(error)
         }

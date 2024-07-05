@@ -16,8 +16,7 @@ class TaskListViewController: BaseViewController {
     
     override func loadView() {
         self.view = mainView
-        
-        mainView.setLargeTitle("전체")
+
         configureTable()
     }
     
@@ -36,6 +35,10 @@ class TaskListViewController: BaseViewController {
         super.viewWillAppear(animated)
         
         mainView.table.reloadSections(IndexSet(integer: 0), with: .none)
+    }
+    
+    func configureViewWithData(_ t: String, _ c: UIColor) {
+        mainView.configureTitle(t, c)
     }
 }
 

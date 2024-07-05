@@ -21,17 +21,16 @@ final class TaskListView: BaseView {
     override func configureLayout() {
         largeTitle.snp.makeConstraints {
             $0.top.horizontalEdges.equalTo(self.safeAreaLayoutGuide)
-            $0.height.equalTo(40)
+            $0.height.equalTo(48)
         }
         table.snp.makeConstraints {
             $0.top.equalTo(largeTitle.snp.bottom)
             $0.horizontalEdges.bottom.equalTo(self.safeAreaLayoutGuide)
         }
     }
-}
-
-extension TaskListView {
-    func setLargeTitle(_ t: String) {
-        largeTitle.label.text = t
+    
+    func configureTitle(_ t: String, _ c: UIColor) {
+        largeTitle.setTitle(t, c)
     }
 }
+

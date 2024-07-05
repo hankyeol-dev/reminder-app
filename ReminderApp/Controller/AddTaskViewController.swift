@@ -57,10 +57,22 @@ extension AddTaskViewController {
     @objc
     func saveTask() {
         guard let titleText = mainView.field.titleField.text,
-              let memoText = mainView.field.memoField.text else { return }
-        guard let due = self.due else { return }
-        guard self.priority != "" || self.priority != "없음" else { return }
-        guard self.tags != "" else { return }
+              let memoText = mainView.field.memoField.text else {
+            print("여기가 nil?")
+            return
+        }
+        guard let due = self.due else {
+            print("due가 nil?")
+            return
+        }
+        guard self.priority != "" || self.priority != "없음" else {
+            print("priority가 nil?")
+            return
+        }
+        guard self.tags != "" else {
+            print("아니면 태그가?")
+            return
+        }
         
         do {
             let db = try Realm()
@@ -73,7 +85,7 @@ extension AddTaskViewController {
             }
             self.dismiss(animated: true)
         } catch {
-            self.view.makeToast("새로운 할 일을 저장할 수 없어요 :(", duration: 5)
+            self.mainView.makeToast("새로운 할 일을 저장할 수 없어요 :(", duration: 5, position: .bottom)
         }
     }
     
