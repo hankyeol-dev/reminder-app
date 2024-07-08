@@ -46,6 +46,8 @@ final class AddTaskViewController: BaseViewController {
         } else {
             navigationItem.rightBarButtonItem?.isEnabled = false
         }
+        
+        configureState()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -142,6 +144,36 @@ extension AddTaskViewController {
                 self.isFlaged = vc.isFlaged
             }
         }
+    }
+    
+    private func configureState() {
+        var states: [String] = []
+        
+        if let due = self.due {
+            states.append(Date.formattedDate(due))
+        } else {
+            states.append("")
+        }
+        
+        if self.priority != "" && self.priority != "없음" {
+            states.append(priority)
+        } else {
+            states.append("")
+        }
+        
+        if self.tags != "" {
+            states.append(self.tags)
+        } else {
+            states.append("")
+        }
+        
+        if self.isFlaged {
+            states.append("깃발 표시됨")
+        } else {
+            states.append("")
+        }
+        
+        mainView.configureViewWithData(states)
     }
 }
 

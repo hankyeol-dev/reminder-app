@@ -67,7 +67,7 @@ class TaskListViewController: BaseViewController {
     func configureViewWithData(_ data: Tags) {
         self.mainView.configureTitle("\(data.name) - \(data.tasks.count)개", .systemMint)
         self.tasks = taskRepository.getRecords().output?.where({ query in
-            query.tags.contains(data)
+            query.tags.contains(data) && query.isCompleted == false
         })
     }
 }
