@@ -25,6 +25,8 @@ final class MainViewController: BaseViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        configureNav(title: "", leftBarItem: nil, rightBarItem: UIBarButtonItem(title: "태그 모아보기", style: .plain, target: self, action: #selector(showTagListVC)))
+        
         self.mappingCollectionCount()
         self.mainView.collection.reloadData()
     }
@@ -37,10 +39,8 @@ final class MainViewController: BaseViewController {
 
 extension MainViewController {
     @objc
-    func goTotalTaskLists() {
-        goSomeVC(vc: TaskListViewController()) { vc in
-//            vc.configureViewWithData("전체", .systemGreen)
-        }
+    func showTagListVC() {
+        goSomeVC(vc: TagListViewController()) { _ in }
     }
     
     @objc

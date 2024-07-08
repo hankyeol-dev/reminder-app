@@ -8,9 +8,6 @@
 import UIKit
 import SnapKit
 
-// checkmark.circle.fill
-// circle
-
 final class TaskCell: UITableViewCell {
     private let back = UIView()
     private let taskStack = UIStackView()

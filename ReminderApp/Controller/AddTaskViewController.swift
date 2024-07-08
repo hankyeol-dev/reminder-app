@@ -89,13 +89,31 @@ extension AddTaskViewController {
         
         // 5. 만약에 tag가 있다면, tags list에 반영해주고, linkingObject에도 반영해줘야 함
         if self.tags != "" {
-            let relatedTag = Tags(name: self.tags)
-            self.tagRepository.addRecordWithHandler(relatedTag) { tag in
-                tag.tasks.append(singleTask)
+            var relatedTag:Tags
+            
+            let isAlreadyIn = self.tagRepository.getRecords().output?.where({ query in
+                query.name == self.tags
+            })
+            
+            if isAlreadyIn?.count != 0 {
+                // 5-1. 이미 저장된 태그라면?
+                guard let isIn = isAlreadyIn, let first = isIn.first else { return }
+                self.tagRepository.updateSingleRecordById(id: first.id) { tag in
+                    tag.tasks.append(singleTask)
+                }
+                relatedTag = first
+            } else {
+                // 5-2. 저장되지 않은 태그라면
+                relatedTag = Tags(name: self.tags)
+                self.tagRepository.addRecordWithHandler(relatedTag) { tag in
+                    tag.tasks.append(singleTask)
+                }
+                
             }
             result = self.taskRepository.addRecordWithHandler(singleTask) { task in
                 task.tags.append(relatedTag)
             }
+            
         } else {
             result = taskRepository.addSingleRecord(singleTask)
         }

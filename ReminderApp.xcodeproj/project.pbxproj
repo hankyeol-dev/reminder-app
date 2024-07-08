@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		810C33382C3BAA080020266A /* TagListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C33372C3BAA080020266A /* TagListViewController.swift */; };
+		810C333C2C3BACF90020266A /* TagTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C333B2C3BACF90020266A /* TagTableCell.swift */; };
 		8189BD4E2C36B73300B9419C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BD4D2C36B73300B9419C /* Repository.swift */; };
 		8189BD512C36B83C00B9419C /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BD502C36B83C00B9419C /* Extension+Date.swift */; };
 		8189BD532C36BACB00B9419C /* TagsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BD522C36BACB00B9419C /* TagsModel.swift */; };
@@ -47,6 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		810C33372C3BAA080020266A /* TagListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListViewController.swift; sourceTree = "<group>"; };
+		810C333B2C3BACF90020266A /* TagTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTableCell.swift; sourceTree = "<group>"; };
 		8189BD4D2C36B73300B9419C /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		8189BD502C36B83C00B9419C /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
 		8189BD522C36BACB00B9419C /* TagsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsModel.swift; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 				81CF207B2C33F091005A9014 /* AddTaskViewController.swift */,
 				81CF209B2C3514BF005A9014 /* TaskDetailViewController.swift */,
 				81CF20872C342A29005A9014 /* TaskListViewController.swift */,
+				810C33372C3BAA080020266A /* TagListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 			children = (
 				81CF208C2C342A8B005A9014 /* TaskListView.swift */,
 				81CF20902C342D2D005A9014 /* TaskCell.swift */,
+				810C333B2C3BACF90020266A /* TagTableCell.swift */,
 			);
 			path = TaskList;
 			sourceTree = "<group>";
@@ -331,6 +337,7 @@
 				8189BD5F2C37829000B9419C /* FlagCell.swift in Sources */,
 				8189BD5B2C36E16B00B9419C /* CollectionItemInput.swift in Sources */,
 				81CF20912C342D2D005A9014 /* TaskCell.swift in Sources */,
+				810C33382C3BAA080020266A /* TagListViewController.swift in Sources */,
 				81CF207E2C33FF39005A9014 /* AddTaskView.swift in Sources */,
 				81CF208D2C342A8B005A9014 /* TaskListView.swift in Sources */,
 				81CF20862C3416C6005A9014 /* Divider.swift in Sources */,
@@ -352,6 +359,7 @@
 				81CF204D2C33E508005A9014 /* AppDelegate.swift in Sources */,
 				81CF204F2C33E508005A9014 /* SceneDelegate.swift in Sources */,
 				81CF20A52C3539B8005A9014 /* PriorityCell.swift in Sources */,
+				810C333C2C3BACF90020266A /* TagTableCell.swift in Sources */,
 				8189BD532C36BACB00B9419C /* TagsModel.swift in Sources */,
 				81CF20A12C351BB0005A9014 /* DuedateCell.swift in Sources */,
 				81CF207C2C33F091005A9014 /* AddTaskViewController.swift in Sources */,
