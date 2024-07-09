@@ -12,6 +12,7 @@ import Toast
 final class AddTaskViewController: BaseViewController {
     var sender: (() -> ())?
     
+    private let vm = AddTaskViewModel()
     private let taskRepository = Repository<Tasks>()
     private let tagRepository = Repository<Tags>()
     
@@ -134,46 +135,18 @@ extension AddTaskViewController {
     func goTaskDetail() {
         goSomeVC(vc: TaskDetailViewController()) { vc in
             vc.sender = {
-                
-                if let due = vc.due {
-                    self.due = due
-                }
-                
-                self.priority = vc.priority
-                self.tags = vc.tags
-                self.isFlaged = vc.isFlaged
+                self.vm.dueInput.value = vc.due
+                self.vm.priorityInput.value = vc.priority
+                self.vm.tagInput.value = vc.tags
+                self.vm.isFlagInput.value = vc.isFlaged
             }
         }
     }
     
     private func configureState() {
-        var states: [String] = []
-        
-        if let due = self.due {
-            states.append(Date.formattedDate(due))
-        } else {
-            states.append("")
+        vm.stateOuput.bind([]) { value in
+            self.mainView.configureViewWithData(value)
         }
-        
-        if self.priority != "" && self.priority != "없음" {
-            states.append(priority)
-        } else {
-            states.append("")
-        }
-        
-        if self.tags != "" {
-            states.append(self.tags)
-        } else {
-            states.append("")
-        }
-        
-        if self.isFlaged {
-            states.append("깃발 표시됨")
-        } else {
-            states.append("")
-        }
-        
-        mainView.configureViewWithData(states)
     }
 }
 

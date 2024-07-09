@@ -10,6 +10,8 @@
 		810C33382C3BAA080020266A /* TagListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C33372C3BAA080020266A /* TagListViewController.swift */; };
 		810C333C2C3BACF90020266A /* TagTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C333B2C3BACF90020266A /* TagTableCell.swift */; };
 		810C333E2C3BC1F30020266A /* DetailItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C333D2C3BC1F30020266A /* DetailItems.swift */; };
+		81753A162C3D4E4A0076744B /* AddTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81753A152C3D4E4A0076744B /* AddTaskViewModel.swift */; };
+		81753A182C3D4E540076744B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81753A172C3D4E540076744B /* Observable.swift */; };
 		8189BD4E2C36B73300B9419C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BD4D2C36B73300B9419C /* Repository.swift */; };
 		8189BD512C36B83C00B9419C /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BD502C36B83C00B9419C /* Extension+Date.swift */; };
 		8189BD532C36BACB00B9419C /* TagsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189BD522C36BACB00B9419C /* TagsModel.swift */; };
@@ -53,6 +55,8 @@
 		810C33372C3BAA080020266A /* TagListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListViewController.swift; sourceTree = "<group>"; };
 		810C333B2C3BACF90020266A /* TagTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTableCell.swift; sourceTree = "<group>"; };
 		810C333D2C3BC1F30020266A /* DetailItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItems.swift; sourceTree = "<group>"; };
+		81753A152C3D4E4A0076744B /* AddTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewModel.swift; sourceTree = "<group>"; };
+		81753A172C3D4E540076744B /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		8189BD4D2C36B73300B9419C /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		8189BD502C36B83C00B9419C /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
 		8189BD522C36BACB00B9419C /* TagsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsModel.swift; sourceTree = "<group>"; };
@@ -105,6 +109,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81753A142C3D4E3A0076744B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				81753A152C3D4E4A0076744B /* AddTaskViewModel.swift */,
+				81753A172C3D4E540076744B /* Observable.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		8189BD4F2C36B83500B9419C /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +158,7 @@
 				8189BD4F2C36B83500B9419C /* Service */,
 				81CF206A2C33E5D8005A9014 /* Model */,
 				81CF20692C33E5AD005A9014 /* View */,
+				81753A142C3D4E3A0076744B /* ViewModel */,
 				81CF206B2C33E5DD005A9014 /* Controller */,
 				81CF204C2C33E508005A9014 /* AppDelegate.swift */,
 				81CF204E2C33E508005A9014 /* SceneDelegate.swift */,
@@ -335,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81CF209C2C3514BF005A9014 /* TaskDetailViewController.swift in Sources */,
+				81753A162C3D4E4A0076744B /* AddTaskViewModel.swift in Sources */,
 				81CF209A2C3510B8005A9014 /* DetailsButton.swift in Sources */,
 				81CF20712C33E634005A9014 /* BaseViewController.swift in Sources */,
 				8189BD5F2C37829000B9419C /* FlagCell.swift in Sources */,
@@ -363,6 +378,7 @@
 				81CF204D2C33E508005A9014 /* AppDelegate.swift in Sources */,
 				81CF204F2C33E508005A9014 /* SceneDelegate.swift in Sources */,
 				81CF20A52C3539B8005A9014 /* PriorityCell.swift in Sources */,
+				81753A182C3D4E540076744B /* Observable.swift in Sources */,
 				810C333C2C3BACF90020266A /* TagTableCell.swift in Sources */,
 				8189BD532C36BACB00B9419C /* TagsModel.swift in Sources */,
 				81CF20A12C351BB0005A9014 /* DuedateCell.swift in Sources */,
